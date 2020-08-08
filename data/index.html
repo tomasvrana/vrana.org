@@ -6,6 +6,7 @@
         const data = await response.json();
         let htmlString = '<ul>';
         for (let file of data) {
+          console.log(typeof file);
           htmlString += `<li><a href="/${file.path}" target="_blank">${file.name}</a></li>`;
         }
         htmlString += '</ul>';
